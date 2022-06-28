@@ -1,0 +1,202 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="container-fluid">
+        <div class="header text-center">
+          <h3 class="title">Report details</h3>
+         
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-chart">
+              <div class="card-header card-header-rose">
+                <div id="roundedLineChart" class="ct-chart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Rounded Line Chart</h4>
+                <p class="card-category">Line Chart</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-chart">
+              <div class="card-header card-header-warning">
+                <div id="straightLinesChart" class="ct-chart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Straight Lines Chart</h4>
+                <p class="card-category">Line Chart with Points</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-chart">
+              <div class="card-header card-header-info">
+                <div id="simpleBarChart" class="ct-chart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title ">Simple Bar Chart</h4>
+                <p class="card-category">Bar Chart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header card-header-icon card-header-info">
+                <div class="card-icon">
+                  <i class="material-icons">timeline</i>
+                </div>
+                <h4 class="card-title">Coloured Line Chart
+                  <small> - Rounded</small>
+                </h4>
+              </div>
+              <div class="card-body">
+                <div id="colouredRoundedLineChart" class="ct-chart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header card-header-icon card-header-rose">
+                <div class="card-icon">
+                  <i class="material-icons">insert_chart</i>
+                </div>
+                <h4 class="card-title">Multiple Bars Chart
+                  <small>- Bar Chart</small>
+                </h4>
+              </div>
+              <div class="card-body">
+                <div id="multipleBarsChart" class="ct-chart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="card">
+              <div class="card-header card-header-icon card-header-info">
+                <div class="card-icon">
+                  <i class="material-icons">timeline</i>
+                </div>
+                <h4 class="card-title">Coloured Bars Chart
+                  <small> - Rounded</small>
+                </h4>
+              </div>
+              <div class="card-body">
+                <div id="colouredBarsChart" class="ct-chart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="card card-chart">
+              <div class="card-header card-header-icon card-header-danger">
+                <div class="card-icon">
+                  <i class="material-icons">pie_chart</i>
+                </div>
+                <h4 class="card-title">Pie Chart</h4>
+              </div>
+              <div class="card-body">
+                <div id="chartPreferences" class="ct-chart"></div>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h6 class="card-category">Legend</h6>
+                  </div>
+                  <div class="col-md-12">
+                    <i class="fa fa-circle text-info"></i> Apple
+                    <i class="fa fa-circle text-warning"></i> Samsung
+                    <i class="fa fa-circle text-danger"></i> Windows Phone
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="page-categories">
+         <!-- <h3 class="title text-center">Alerts !</h3> -->
+          <br />
+          <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#link7" role="tablist">
+                <i class="material-icons">info</i> Alerts  !
+              </a>
+            </li>
+           
+          
+          </ul>
+          <div class="tab-content tab-space tab-subcategories">
+            <div class="tab-pane" id="link7">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">Description about product</h4>
+                  <p class="card-category">
+                    More information here
+                  </p>
+                </div>
+
+
+                <div class="card-body" *ngFor="let post of posts$ | async">
+
+
+                  <div class="card card-product">
+                    <div class="card-header card-header-image" data-header-animation="true">
+                      <a href="#pablo">
+                        <img class="img" src="{{post.picture}}">
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-actions text-center">
+                        <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
+                          <i class="material-icons">build</i> Fix Header!
+                        </button>
+                        <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="View" [matTooltipPosition]="'below'">
+                          <i class="material-icons">art_track</i>
+                        </button>
+
+                      </div>
+
+                      <div class="card-description">
+                      {{post.description}}
+                      </div>
+                    </div>
+                    <div class="card-footer">
+        
+                      <div class="stats">
+                        <p class="card-category"><i class="material-icons">place</i> {{post.defaultcomment}}</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <br>
+            
+                </div>
+              </div>
+            </div>
+          
+      
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,40 @@
+<div class="main-content">
+<div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-icon card-header-rose">
+      
+        <h4 class="card-title "> History</h4>
+      </div>
+        <div class="card-body table-full-width">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                          <th *ngFor="let cell of tableData3.headerRow">{{ cell }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                          <tr  *ngFor="let post of history$ | async">
+                            <td class="table-warning">{{post.question}}</td>
+                            <td  class="table-info" >{{post.answer}}</td>
+                              <td class="table-success" >{{post.comment}} </td>
+                              <td> At  {{post.dateposted  | date :'short'}}</td>
+                             
+                        
+                          </tr>
+                        
+                          
+                       
+              <!--           <tr class="table-danger">
+                              <td *ngFor="let post of history$ | async">{{post.question}}</td>
+                          </tr>
+                         -->
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>

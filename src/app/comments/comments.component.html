@@ -1,0 +1,190 @@
+<div class="col-md-12">
+  <div class="main-content">
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="card">
+          <div class="card-header card-header-tabs card-header" [style.background-color]="'#07083D'">
+            <div class="nav-tabs-navigation">
+              <div class="nav-tabs-wrapper">
+                <span class="nav-tabs-title" [style.background-color]="'#07083D'"></span>
+                <ul class="nav nav-tabs" data-tabs="tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#profile" data-toggle="tab">
+                      <i class="material-icons" [style.background-color]="'#07083D'">bug_report</i> Questions
+                      <div class="ripple-container"></div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="tab-content">
+              <div class="col-md-12" id="profile">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Title</th>
+                      <th>Description</th>
+                      <th>Date</th>
+
+                    </tr>
+                    <tr *ngFor="let post of posts$ | async">
+
+                      <td>{{post.title}}</td>
+                      <td>{{post.description}}</td>
+                      <td>{{post.postdate | date :'short'}} </td>
+                      <td class="td-actions text-right">
+
+                        
+                        <a mat-raised-button type="button" matTooltip="Edit " [matTooltipPosition]="'left'" (click)="setEditQuestion(post)" class="btn btn-primary btn-link btn-sm">
+                          <i class="material-icons">edit</i>
+                        </a>
+
+                     
+                
+
+                        <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'left'"
+                          (click)="delete(post.id)" class="btn btn-danger btn-link btn-sm">
+                          <i class="material-icons">close</i>
+                        </button>
+
+                        <button mat-raised-button class="btn btn-raised btn-round btn-info" [style.background-color]="'#07083D'" (click)="getanswerquestionbyid(post.id)">
+                          See Answer!
+                        </button>
+
+
+                        <!-- notice modal -->
+                        <div class="modal fade" id="noticeModal" tabindex="-1" role="dialog"
+                          aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-notice">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="myModalLabel">The answer is </h5>
+                                <button mat-button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                  <i class="material-icons">close</i>
+                                </button>
+                              </div>
+
+                    <tr *ngFor="let answer of answersList">
+
+                      <!--    <div *ngIf="answerquestionid == postid; ">{{answer.questionid}}  {{post.id}}</div>-->
+
+                      <td>{{answer.answer}}</td>
+                      <td>{{answer.postdate | date :'short'}} </td>
+
+                    </tr>
+           
+                    <div class="modal-footer justify-content-center">
+                      <button mat-raised-button type="button" class="btn btn-info btn-round" data-dismiss="modal"  [style.background-color]="'#07083D'">Close
+                        </button>
+                    </div>
+              </div>
+            </div>
+                        </div>
+          <!-- end notice modal -->
+          </td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+                        <!-- Classic Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                          aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h4 class="modal-title">
+
+                                  <div class="card-header card-header-primary card-header-text">
+                                    <div class="card-text">
+                                      <h4 class="card-title">Update question</h4>
+                                    </div>
+                                  </div>
+
+                                </h4>
+                                <button mat-button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                  <i class="material-icons">clear</i>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+
+                                <div class="container mt-5">
+                                  <form [formGroup]="questionForm">
+
+
+                                    <div class="col-sm-12 mt-2">
+                                      <input type="text" class="form-control" formControlName="title"
+                                        placeholder="Enter title">
+
+                                    </div>
+
+                                    <div class="col-sm-12 mt-2">
+                                      <input type="text" class="form-control" formControlName="description"
+                                        placeholder="Enter description">
+
+                                    </div>
+
+                                    <!--    <div *ngIf="getparamid" >-->
+                                    <div>
+                                      <button mat-raised-button type="button" class="btn btn-link" type="submit"
+                                        (click)="questionUpdate()" data-dismiss="modal">Update</button>
+                                    </div>
+
+
+                                  </form>
+
+                                </div>
+
+
+                              </div>
+                              <!--  <div class="modal-footer">
+                                        <button mat-raised-button type="button" class="btn btn-link"  (click)="questionUpdate()" >Updated</button>
+                                        <button mat-raised-button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+                                      </div>
+                                      -->
+                            </div>
+                          </div>
+                        </div>
+                        <!--  End Modal -->
+
+                        <!-- notice modal -->
+                        <div class="modal fade" id="addAnswerModal" tabindex="-1" role="dialog"
+                          aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-notice">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="myModalLabel">Add Answer </h5>
+                                <button mat-button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                  <i class="material-icons">close</i>
+                                </button>
+                              </div>
+                             <div class="modal-body">
+                                          <div class="instruction">
+                                            <div class="row">
+                                              <div class="col-md-8">
+                                              <textarea [(ngModel)]="answerText" required></textarea>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                       
+                    <div class="modal-footer justify-content-center">
+                      <button mat-raised-button type="button" class="btn btn-info btn-round" [disabled]="!answerText" (click)="addAnswer()" data-dismiss="modal">Save Answer!</button>
+                    </div>
+              </div>
+            </div>
+                        </div>

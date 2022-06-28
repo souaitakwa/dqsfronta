@@ -1,0 +1,133 @@
+
+<div class="wrapper wrapper-full-page">
+  <div class="page-header login-page header-filter" filter-color="black" style="background-image: url('./assets/img/ALPHALYRBackground.jpg') ; background-size: cover; background-position: top center; ">
+    <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto">
+          <form class="form" method="" action="" [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+            <div class="card card-login card-hidden">
+              <div class="card-header card-header-primary text-center">
+                <h4 class="card-title">Log in</h4>
+              <!--  <div class="social-line">
+                  <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                    <i class="fa fa-facebook-square"></i>
+                  </a>
+                  <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                </div>
+                -->
+              </div>
+              <div class="card-body ">
+                <p class="card-description text-center">Welcome</p>
+              <!--  <span class="bmd-form-group">
+               <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">face</i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="First Name...">
+                  </div>
+                </span>--> 
+                <span class="bmd-form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">email</i>
+                      </span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Email..." formControlName="email">
+                  </div>
+                </span>
+                <span class="bmd-form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">lock_outline</i>
+                      </span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Password..." formControlName="password">
+                  </div>
+                </span>
+              </div>
+              <div class="card-footer justify-content-center">
+               <!-- <a href="#pablo" class="btn btn-primary btn-link btn-lg" routerLink="/dashboard" routerLinkActive="active">Lets Go</a> -->
+                <button
+                color="accent"
+                [disabled]="!loginForm.valid"
+                mat-raised-button
+                type="submit"
+              >
+                <span >Log in</span>
+              </button>
+              </div>
+            </div>
+          </form>
+
+   <!--       <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Ex. Jon" formControlName="email" />
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                type="password"
+                placeholder="Ex. Jon"
+                formControlName="password"
+              />
+            </mat-form-field>
+            <button
+              color="accent"
+              [disabled]="!loginForm.valid"
+              mat-raised-button
+              type="submit"
+            >
+              <span>Log in</span>
+            </button>
+          </form>
+          -->
+        </div>
+      </div>
+    </div>
+    <footer class="footer ">
+      <div class="container">
+        <nav class="pull-left">
+          <ul>
+            <li>
+              <a href="https://alphalyr.fr/">
+                Alphalyr
+              </a>
+            </li>
+            <li>
+              <a href="https://alphalyr.fr/a-propos/">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="https://alphalyr.fr/solutions/#SOLUTIONSBYROLE">
+                Solutions
+              </a>
+            </li>
+            <li>
+              <a href="https://alphalyr.fr/plateforme/">
+                plateform
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright pull-right">
+          &copy;
+            {{test | date: 'yyyy'}}, made with <i class="material-icons">favorite</i> by
+          <a href="https://www.creative-tim.com" target="_blank">Alphalyr</a> 
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

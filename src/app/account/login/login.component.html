@@ -1,0 +1,59 @@
+
+
+<div filter-color="black" style="background-image: url('./assets/img/ALPHALYRBackground.jpg'); background-size: cover; background-position: top center;">
+<div class="center-content">
+  <div class="center">
+    <div class="card ">
+      <div class=" card-header-icon"> 
+        <div >
+          <div class="logo-img"   >
+            <img src="/assets/img/logo.png"/>
+        </div>
+        </div>
+      </div>
+      <div class="card-body ">
+        <form class="form-horizontal">
+          <div class="row">
+            <label class="col-md-3 col-2 col-form-label">User Name</label>
+            <div class="col-md-9 col-9">
+              <mat-form-field class="example-full-width">
+                <input matInput type="username"  [(ngModel)]="user.username" name="username" #username="ngModel" required>
+                <mat-error *ngIf="username.errors?.required">Username is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-md-3 col-2 col-form-label">Password</label>
+            <div class="col-md-9 col-9">
+              <mat-form-field class="example-full-width">
+                <input matInput type="password" [(ngModel)]="user.password" name="password"  #password="ngModel" required>
+                <mat-error *ngIf="password.errors?.required">password is required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <label class="col-md-3"></label>
+            <div class="col-md-9">
+              <mat-checkbox>Remember me</mat-checkbox>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer ">
+        <div class="row">
+          <div class="col-md-20">
+            <button mat-raised-button type="submit"  mat-button routerLink="/dashboard" routerLinkActive="active" class="btn btn-fill btn-" [style.background-color]="'#07083D'"  [style.color]="'white'" >Sign in</button>
+            
+            <button mat-raised-button type="submit"  mat-button routerLink="/signup" routerLinkActive="active" class="btn btn-fill btn-" [style.background-color]="'#07083D'"  [style.color]="'white'">Sign up</button>
+
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>

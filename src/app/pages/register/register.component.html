@@ -1,0 +1,218 @@
+
+<div class="wrapper wrapper-full-page">
+  <div class="page-header register-page header-filter" filter-color="black" style="background-image: url('./assets/img/ALPHALYRBackground.jpg'); background-size: cover; background-position: top center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 ml-auto mr-auto">
+          <div class="card card-signup">
+            <h2 class="card-title text-center">Register</h2>
+            <div class="card-body">
+              <div class="row">
+            <!--    <div class="col-md-5 ml-auto">
+                          <div class="col-md-5 ">
+                            <legend></legend>
+                            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                <div class="fileinput-new thumbnail img-circle">
+                                    <img src="./assets/img/placeholder.jpg" alt="...">
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
+                                <div>
+                                    <span class="btn btn-round btn-primary btn-file">
+                                        <span class="fileinput-new">Picture</span>
+                                        <span class="fileinput-exists">Change</span>
+                                        <input type="file" name="..." />
+                                    </span>
+                                    <br />
+                                    <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                -->
+                <div class="col-md-5 mr-auto">
+                
+                <!--
+                  <div class="social text-center">
+                    <button mat-raised-button class="btn btn-just-icon btn-round btn-twitter">
+                      <i class="fa fa-twitter"></i>
+                    </button>
+                    <button mat-raised-button class="btn btn-just-icon btn-round btn-dribbble">
+                      <i class="fa fa-dribbble"></i>
+                    </button>
+                    <button mat-raised-button class="btn btn-just-icon btn-round btn-facebook">
+                      <i class="fa fa-facebook"> </i>
+                    </button>
+                    <h4 class="mt-3"> or be classical </h4>
+                  </div>
+
+                 -->
+                  <form class="form" method="" action="" [formGroup]="signupForm" (ngSubmit)="signup()" novalidate>
+                  
+                  <!--
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">face</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="First Name..." formControlName="name" >
+                      </div>
+                    </div>
+
+                    
+
+
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">mail</i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email..."  formControlName="email">
+                      </div>
+                    </div>
+
+
+                
+
+
+
+                    <div class="form-group has-default">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="material-icons">lock_outline</i>
+                          </span>
+                        </div>
+                        <input type="password" placeholder="Password..." class="form-control"  formControlName="password">
+                      </div>
+                    </div>
+-->
+
+                 <!--
+
+                      <div class="form-group has-default">
+                        <i class="material-icons">gavel</i> 
+                          <div class="input-group">
+                            <mat-form-field>
+                                <mat-select multiple placeholder="Role" [(ngModel)]="currentCity" name="Paris" ariaLabel="cities[0]">
+                                    <mat-option *ngFor="let city of cities" [value]="city.value">
+                                        {{ city.viewValue }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                          </div>
+                         
+                      </div>
+                 
+-->
+
+                 <!--    <mat-checkbox class="form-check">
+                     Remmember me
+                     <a href="#something">terms and conditions</a>.  
+                    </mat-checkbox>
+                    <div class="text-center">
+                      <a href="#pablo" class="btn btn-primary btn-round mt-4"  routerLink="/pages/login" routerLinkActive="active"  
+                         [disabled]="!signupForm.valid"  mat-raised-button  type="submit">Get Started</a>
+                    </div>
+-->
+
+<!--
+<div class="col-md-5 ">
+  <legend></legend>
+  <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+      <div class="fileinput-new thumbnail img-circle">
+          <img src="./assets/img/placeholder.jpg" alt="...">
+      </div>
+      <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
+      <div>
+          <span class="btn btn-round btn-primary btn-file">
+              <span class="fileinput-new">Picture</span>
+              <span class="fileinput-exists">Change</span>
+              <input type="file" name="..." formControlName="picture" />
+          </span>
+          <br />
+          <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+      </div>
+  </div>
+</div>
+-->
+                    <mat-form-field>
+                      
+                      <span class="input-group-text">
+                        <i class="material-icons">face</i>
+                      </span>
+                      <input matInput placeholder="First Name..." formControlName="name" />
+                    </mat-form-field>
+                    <mat-form-field>
+                      <span class="input-group-text">
+                        <i class="material-icons">mail</i>
+                      </span>
+                      <input matInput  placeholder="Email..." formControlName="email" />
+                    </mat-form-field>
+                    <mat-form-field>
+                      <span class="input-group-text">
+                        <i class="material-icons">lock_outline</i>
+                      </span>
+                      <input
+                        matInput
+                        type="password"
+                        placeholder="Password..."
+                        formControlName="password"
+                      />
+                    </mat-form-field>
+                  
+                    <button 
+                      color="accent"
+                      [disabled]="!signupForm.valid"
+                      mat-raised-button
+                      type="submit"
+                    >
+                      <span>Sign up</span>
+                    </button>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer ">
+      <div class="container">
+        <nav class="pull-left">
+          <ul>
+            <li>
+              <a href="https://alphalyr.fr/">
+                Alphalyr
+              </a>
+            </li>
+            <li>
+              <a href="https://alphalyr.fr/a-propos/">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="https://alphalyr.fr/solutions/#SOLUTIONSBYROLE">
+                Solutions
+              </a>
+            </li>
+            <li>
+              <a href="https://alphalyr.fr/plateforme/">
+                plateform
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright pull-right">
+          &copy;
+        {{test | date: 'yyyy'}}, made with <i class="material-icons">favorite</i> by
+          <a href="https://alphalyr.fr/" target="_blank">Alphalyr</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

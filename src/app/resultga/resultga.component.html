@@ -1,0 +1,95 @@
+<div class="main-content">
+<div class="card-body">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header card-header-icon card-header-rose">
+          
+          <h4 class="card-title ">  Audit</h4>
+        </div>
+          <div class="card-body table-full-width">
+              <div class="table-responsive">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                            <th *ngFor="let cell of tableData3.headerRow">{{ cell }}</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                            <tr class="{{sumOfSelfRefferel/sumOfSessions > 5 ? 'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[0]">{{cell}}</td>
+                            </tr>
+
+                            <tr class="{{sumOfCrawlerRebot > 0 ? 'table-danger':'table-success'}}">
+                              <td *ngFor="let cell of tableData3.dataRows[4]">{{cell}}</td>
+                          </tr>
+                      
+                            <tr class="{{sumOfPagesViewsPlateformes > 0 ? 'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[1]">{{cell}}</td>
+                            </tr>
+
+
+                            <tr class="{{sessions/sumOfSessions > 2 ?'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[2]">{{cell}}</td>
+                            </tr>
+
+
+
+                            <tr class="{{sumOfPageViews > 0 ? 'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[3]">{{cell}}</td>
+                            </tr>
+
+
+
+
+                            
+                            <tr class="{{sumOfCrawlerRebot > 0 ? 'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[5]">{{cell}}</td>
+                            </tr>
+
+
+                            <tr class="{{sumOfHostnames > 0 ? 'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[6]">{{cell}}</td>
+                            </tr>
+
+
+                            <tr class="{{sumOfSelfRefferel > 0 ? 'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[7]">{{cell}}</td>
+                            </tr>
+
+
+                            <tr class="{{sessions/sumOfSessions > 0.2 ?'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[8]">{{cell}}</td>
+                            </tr>
+
+
+
+                            <tr class="{{sumOfPagesViewsPlateformes > 0 ?'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[9]">{{cell}}</td>
+                            </tr>
+                            <tr class="{{sessions/sumOfPageViewsMutli100 > 10 ?'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[10]">{{cell}}</td>
+                            </tr>
+                            <tr class="{{resultsFoundSum < 30 ? 'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[11]">{{cell}}</td>
+                            </tr>
+
+
+                            <tr class="{{sumOfSessionWithSearch < 0 ? 'table-danger':'table-success'}}">
+                                <td *ngFor="let cell of tableData3.dataRows[12]">{{cell}}</td>
+                            </tr>
+                            <tr class="table-success">
+                                <td *ngFor="let cell of tableData3.dataRows[13]">{{cell}}</td>
+                            </tr>
+                            <tr class="table-danger">
+                                <td *ngFor="let cell of tableData3.dataRows[14]">{{cell}}</td>
+                            </tr>
+                          
+                      </tbody>
+                  </table>
+              </div>
+
+          </div>
+      </div>
+  </div>
+  </div>
+</div>

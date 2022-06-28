@@ -1,0 +1,197 @@
+<div class="main-content">
+    <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+          <div class="page-categories">
+            <h3 class="title text-center">What do you need ?</h3>
+            <br />
+            <ul class="nav nav-pills nav-pills- nav-pills-icons justify-content-center" role="tablist">
+             
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link10" role="tablist">
+                  <i class="material-icons">help_outline</i> Open a ticket
+                </a>
+              </li>
+      <!--       <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#link8" role="tablist">
+                    <i class="material-icons">schedule</i>History
+                </a>
+              </li>
+              
+           --> 
+             <!-- <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#link7" role="tablist">
+                  <i class="material-icons">info</i> Emergency
+                </a>
+              </li>
+              -->
+            </ul>
+            <div class="tab-content tab-space tab-subcategories">
+              <div class="tab-pane" id="link7">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title">You can contact us now </h4>
+                    <p class="card-category">
+                        We will get back to you as soon as possible
+                    </p>
+                  </div>
+                  <div class="card-body">
+                    <div class="col-md-1 col-sm-1">
+                      <button mat-raised-button class="btn btn-danger">Sent an email</button>
+
+                      </div>
+                  </div>
+                </div>
+              </div>
+          <!--    <div class="tab-pane active" id="link8">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title">My old tickets</h4>
+                    <p class="card-category">
+                    </p>
+                  </div>
+                  <div class="card-body">
+                    <div class="col-md-12">
+                      <div class="card">
+                        <div class="card-header card-header-icon card-header-rose">
+                          
+                          <h4 class="card-title "> History of tickets</h4>
+                        </div>
+                          <div class="card-body table-full-width">
+                              <div class="table-responsive">
+                                  <table class="table table-hover">
+                                      <thead>
+                                          <tr>
+                                            <th *ngFor="let cell of tableData3.headerRow">{{ cell }}</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                            <tr class="table-success">
+                                                <td *ngFor="let cell of tableData3.dataRows[0]">{{cell}}</td>
+                                            </tr>
+    
+                                            <tr class="table-danger">
+                                              <td *ngFor="let cell of tableData3.dataRows[4]">{{cell}}</td>
+                                          </tr>
+                                    
+                                            <tr>
+                                                <td *ngFor="let cell of tableData3.dataRows[1]">{{cell}}</td>
+                                            </tr>
+                                            <tr class="table-info">
+                                                <td *ngFor="let cell of tableData3.dataRows[2]">{{cell}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td *ngFor="let cell of tableData3.dataRows[3]">{{cell}}</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td *ngFor="let cell of tableData3.dataRows[5]">{{cell}}</td>
+                                            </tr>
+                                            <tr class="table-warning">
+                                                <td *ngFor="let cell of tableData3.dataRows[6]">{{cell}}</td>
+                                            </tr>
+    
+                                            
+                                      </tbody>
+                                  </table>
+                              </div>
+    
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              !-->
+              <div class="tab-pane" id="link9">
+               
+              </div>
+              <div class="tab-pane" id="link10">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title"></h4>
+                    <p class="card-category">
+                      what is your problem? 
+                    </p>
+                  </div>
+                  <div class="card-body">
+                    <div class="col-md-12">
+                      <div class="card">
+                          <form  class="form-horizontal" 
+                          [formGroup]="form"
+                          #formDirective="ngForm"
+                          (ngSubmit)="onSubmit(form.value)" 
+                          novalidate>
+                            <div class="card-header card-header-rose card-header-text">
+    
+                            </div>
+                              <div class="card-body">
+                                  <div class="row">
+                                    <label class="col-sm-2 col-form-label"> Your question</label>
+                                      <div class="col-sm-7">
+                                        <mat-form-field class="example-full-width has-label"  [ngClass]="displayFieldCss(type, 'text')" >
+                                          <mat-label> Title</mat-label>
+                                          <input type="text"  matInput  formControlName="title">
+                                 
+                                        </mat-form-field>
+                                        <mat-form-field class="example-full-width has-label"  [ngClass]="displayFieldCss(type, 'text')">
+                                          <mat-label> Description</mat-label>
+                                          <input type="text"  matInput formControlName="description">
+                                      
+                                        </mat-form-field>
+                                      </div>
+                                      <label class="col-sm-3 label-on-right">
+                                      </label>
+                                  </div>
+            
+                              </div>
+                              <div class="card-footer text-center">
+                                  <button mat-raised-button type="submit" class="btn btn-rose btn-fill"  [disabled]="!form.valid" mat-raised-button  type="submit"
+                             [style.background-color]="'#07083D'"  text-align= "right"  mat-button  >sent</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+   <!--  <button (click)="isOpen = !isOpen" mat-raised-button color="accent">
+        <mat-icon>add</mat-icon>Question
+      </button>
+      <form
+        *ngIf="isOpen"
+        [formGroup]="form"
+        #formDirective="ngForm"
+        (ngSubmit)="onSubmit(form.value)"
+        novalidate
+      >
+        <mat-form-field>
+          <mat-label> Title</mat-label>
+          <input matInput formControlName="title" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label> description</mat-label>
+          <input matInput formControlName="description" />
+        </mat-form-field>
+        <button
+          color="accent"
+          [disabled]="!form.valid"
+          mat-raised-button
+          type="submit"
+          
+        >
+          <span>Post</span>
+        </button>
+      </form>
+
+      --> 
+
+
+     
+      
+    </div>

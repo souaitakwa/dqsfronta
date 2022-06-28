@@ -1,0 +1,16 @@
+export const environment = {
+  production: true,
+  firstName: 'Shehan',
+
+ /* dialogflow: {
+    angularBot: 'MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCEDfZ/r8OS+/7k\nwX6cszbK01xkUN3FqtSxfGy/FSq6yZdtI71/g2+VmjpvlA7OuvykGma4KpUUA8pW\nay1Iq4OUgppBR7k51A94PtM/5cMOmseriQIIR8dlvnf2do9nVVUZsSHVHnHvsB1v\n1Tawe8u9KlnLz4kl1e+in8siITjFHjbqv8p0+iiqYZySLVqzMUwOrG7kOUGCRRvB\nybpo/XCKuUV5XKGzeCnDhI+/yQ2jmO+fJL28fAWQkwwr97otClRyPxKliTt1Vo/A\nUoI3/6M0NcztxOIMRNJR1a8xISPmhxX+l62Pufh9B9Ms5xIiSUU6bCd8gL+mmfwa\n/8u8XyOLAgMBAAECggEAE6iyfDLR5kVennaR30kszIgntoV1ZpJ2hI+17sJ7cIBH\na0eJU/zgtUBXF7pOdAdRSirmBN/N/sNLsY7WGH30Ij1JMpO3Zv0Dao7LyzTs03VG\naWqFo27wJ9zxpf7jfWouN5tvonccVib9UuNGd4KOg7RU1usoCzpsqOSqDIQum+Wb\nX7WEcIQjUiFLEDLAHSSoh0iJJVxmUvXOzMrIYKpOo0DWn8muvmGTclb6DhLjp2ll\na36XcVbTgVndrjdD4VnGMIUO2EEwmsFN1+scLHObvzJAypFUx2FioCj6VkXr+Szq\npTc8AVKxHFF0qYBZDiKX5ReKtvmMyyP1FVlAh/WpXQKBgQC4UULJg5kWfnlIaxe5\nK3hymLwp9u+snNjebNnI/zJ+fzh7VkUaK6wTa5PttNbhlL5zmBd/TK8mFZwczIrA\ne73gYowItVm3uIQLsUZT7F88grgsAhuhtZp/JtpCQA7DEqKazTiOSF7LeOWtRIhp\n1Vq1PUDyH3zsEalum8cy0U2ZbwKBgQC3aWHQ9tJcng6UekRJ6HiPQjGXx2xor/HG\nlb7HqyLMbgtBbdNOsf5/K5JsxsP/rhv31rgnGVlfkvalRZum4SeFYmk7eBbT1VT1\nxby9d2lznwFjPNCdHSHXze+rrB9LX/VvrwG0sdrRGdgno/2p7YKaBT0pM39/IHi9\nbWwbhFMxpQKBgQCCgHarO1PvC0lQLxMy9kZnzSCdDcwRCVS715IzsAzOZ8FUAncW\n2okRjv/ENGBYg/p82dj5NxBkBLTt5xzuwC5max//IngNjsVfifrjfN7JdzxzXGK4\nEl77XET412YcVFtxA5DhnPgRVN452eZEGN4KqP4M8KKAetjeCcn2fx9UXQKBgQCp\n5x9L2jmIvoo3FQRJiuaTnvgd6AkO+V35XiJ7CJeV1KLsm3ZRwiVFXPGpfn92TK1v\n6yJwZdUa6iM9ervz3UMlFsLw6hALb+XiPqjWwtWW28cHTQDbam89YHITD8F1q5DL\nQs1LvC494bkRD6MeVPzU/OFpV2FWPJhcsg6hdvUyWQKBgHsnu1beqHajdpSlDV5f\nEa/K4atJpI9wrOr4vzRJpz44ixw2OKhAjBRRH3N1ukNgq1Xwjc7fOT9NGdmdziLg\n33TZPkiCROfFneMDvv0952oV0V11zXSJu1D6bvKqetDQK5G3ZcD9u6E8UIeTNQPI\nvHeTVmVZi9qQBLprB+9zuwZH'
+  }*/
+  dialogflow: {
+    projectId: "alphalyr-ysk9"
+  },
+  backend: {
+    baseUrl: "http://localhost:3000/",
+    apiUrl: "http://localhost:3000/api/",
+    requestTextUrl: "http://localhost:3000/api/requestText/"
+  }
+};

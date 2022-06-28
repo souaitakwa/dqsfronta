@@ -1,0 +1,376 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="container-fluid">
+        <div class="header text-center">
+          <h3 class="title">Report details</h3>
+         
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-chart">
+              <div class="card-header card-header-rose">
+                <div id="roundedLineChart" class="ct-chart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Host Name</h4>
+                <p class="card-category"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-chart">
+              <div class="card-header card-header-warning">
+                <div id="straightLinesChart" class="ct-chart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Self Refferel</h4>
+                <p class="card-category"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-chart">
+              <div class="card-header card-header-info">
+                <div id="simpleBarChart" class="ct-chart"></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title ">Robot crowler</h4>
+                <p class="card-category"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header card-header-icon card-header-info">
+                <div class="card-icon">
+                  <i class="material-icons"></i>
+                </div>
+                <h4 class="card-title">Sessions
+                </h4>
+              </div>
+              <div class="card-body">
+                <div id="colouredRoundedLineChart" class="ct-chart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header card-header-icon card-header-rose">
+                <div class="card-icon">
+                  <i class="material-icons"></i>
+                </div>
+                <h4 class="card-title">
+                  Sessions with search
+                </h4>
+              </div>
+              <div class="card-body">
+                <div id="multipleBarsChart" class="ct-chart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="card">
+              <div class="card-header card-header-icon card-header-info">
+                <div class="card-icon">
+                  <i class="material-icons"></i>
+                </div>
+                <h4 class="card-title">Page View Platform
+                </h4>
+              </div>
+              <div class="card-body">
+                <div id="colouredBarsChart" class="ct-chart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="card card-chart">
+              <div class="card-header card-header-icon card-header-danger">
+                <div class="card-icon">
+                  <i class="material-icons"></i>
+                </div>
+                <h4 class="card-title">Page Views</h4>
+              </div>
+              <div class="card-body">
+                <div id="chartPreferences" class="ct-chart"></div>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h6 class="card-category"></h6>
+                  </div>
+                  <div class="col-md-12">
+                    <i class="fa fa-circle text-info"></i> Page Views
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto">
+        <div class="page-categories">
+         <!-- <h3 class="title text-center">Alerts !</h3> -->
+          <br />
+          <ul class="nav nav-pills nav-pills-warning nav-pills-icons justify-content-center" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#link7" role="tablist">
+                <i class="material-icons">info</i> Alerts  !
+              </a>
+            </li>
+           
+          
+          </ul>
+          <div class="tab-content tab-space tab-subcategories">
+            <div class="tab-pane" id="link7">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="card-title">comment</h4>
+                  <p class="card-category">
+                    More information here
+                  </p>
+                </div>
+
+
+                <div class="card-body" *ngFor="let post of posts$ | async">
+
+
+                  <div class="card card-product">
+                    <div class="card-header card-header-image" data-header-animation="true">
+                      <a href="#pablo">
+                        <img class="img" src="{{post.picture}}">
+                      </a>
+                    </div>
+                    <div class="card-body">
+                      <div class="card-actions text-center">
+                        <button mat-raised-button type="button" class="btn btn-danger btn-link fix-broken-card">
+                          <i class="material-icons">build</i> Fix Header!
+                        </button>
+                        <button mat-raised-button type="button" class="btn btn-default btn-link" matTooltip="View" [matTooltipPosition]="'below'">
+                          <i class="material-icons">art_track</i>
+                        </button>
+  
+                        <button mat-raised-button type="button" class="btn btn-danger btn-link" matTooltip="Remove"  (click)="delete(post.id)" [matTooltipPosition]="'below'" *ngIf="userRole == 'administrator'">
+                          <i class="material-icons">close</i>
+                        </button>
+                      </div>
+
+                      <div class="card-description">
+                      {{post.description}}
+                      </div>
+                    </div>
+                    <div class="card-footer">
+        
+                      <div class="stats">
+                        <i class="material-icons">place</i><p class="card-category" [innerHTML]="post.defaultcomment"></p>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <br>
+            
+                </div>
+              </div>
+            </div>
+          
+      
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
+
+    <!-- *ngIf="!posts$" -->
+
+    <div class="header text-center" *ngIf="isCommentExists && userRole == 'administrator'">
+      <h3 class="title">Comments part</h3>
+     
+    </div>
+
+     
+
+
+
+
+       
+
+        
+
+
+
+
+     
+      <div class="row" *ngIf="isCommentExists && userRole == 'administrator'">
+
+        <div class="col-md-12">
+                    <div class="card">
+                        <form [formGroup]="form"class="form-horizontal"   
+                        #formDirective="ngForm"
+                        (ngSubmit)="onSubmit(form.value)"
+                        novalidate>
+
+                  
+
+                          <div class="card-header card-header-primary card-header-text">
+                           
+                          </div>
+                          <legend>Right your comment </legend>
+
+                            <div class="card-body">
+                                <div class="row">
+                                  <label class="col-sm-2 col-form-label">Right more details</label>
+                                    <div class="col-sm-7">
+                                      <mat-form-field class="example-full-width has-label" [ngClass]="{'has-success':validTextType===true}" >
+                                        <input type="text"
+                                        matInput
+                                        id="text"
+                                        (ngModelChange)="textValidationType($event)"
+                                        formControlName="description">
+                                    
+                                      </mat-form-field>
+                                    </div>
+                                    
+                                </div>
+                              
+                              
+                            
+                            </div>
+                           
+
+
+
+
+                            
+
+
+        <legend>Choose a specific comment</legend>
+
+       
+
+        
+        
+
+        
+
+
+
+ 
+        <div class="row">
+               
+  
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header card-header-tabs card-header-primary">
+                <div class="nav-tabs-navigation">
+                  <div class="nav-tabs-wrapper">
+                    <span class="nav-tabs-title"></span>
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#profile" data-toggle="tab">
+                          <i class="material-icons">bug_report</i> choose a comment
+                          <div class="ripple-container"></div>
+                        </a>
+                      </li>
+                    
+                    </ul>
+                  </div>
+                </div>
+              </div>
+                <div class="card-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <table class="table">
+                                  <tbody>
+                                      <tr *ngFor="let row of tasks1">
+                                        <input type="checkbox" (change)="onChange(row.title, $event.target.checked)"> {{row.title}}<br>
+                                          <!-- <td>
+                                              <div [ngSwitch]="row.checked" >
+                                                  <div *ngSwitchCase="true">
+                                                    <mat-checkbox checked="true" ></mat-checkbox>
+                                                  </div>
+                                                  <div *ngSwitchDefault>
+                                                    <mat-checkbox formControlName="defaultcomment" [value]="row.title" (change)="onCheckboxChange($event)"></mat-checkbox>
+                                                  </div>
+  
+                                              </div>
+                                          </td>
+                                          <td >{{row.title}}</td>
+                                          <td class="td-actions text-right">
+                                           
+  
+                                              <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'left'" class="btn btn-danger btn-link btn-sm">
+                                                  <i class="material-icons">close</i>
+                                              </button>
+                                          </td> -->
+                                       </tr>
+                                  </tbody>
+                            </table>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <div class="col-md-4">
+          <legend>Add a picture </legend>
+          <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+              <div class="fileinput-new thumbnail">
+                  <img src="./assets/img/image_placeholder.jpg" alt="...">
+              </div>
+              <div class="fileinput-preview fileinput-exists thumbnail"></div>
+              <div>
+                  <span class="btn btn-primary btn-round btn-file">
+                      <span class="fileinput-new">for more details</span>
+                      <span class="fileinput-exists">Change</span>
+                      <input type="file" name="..."  formControlName="picture"  (change)="onUpload($event)"/>
+                  </span>
+                  <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+              </div>
+          </div>
+      </div>
+  
+        </div>
+
+
+                            <div class="card-footer text-center">
+                                <button mat-raised-button type="submit" class="btn btn-primary btn-fill"  [disabled]="!form.valid" mat-raised-button  type="submit">sent</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+     </div>
+  
+     
+
+
+
+
+
+  </div>
+  
